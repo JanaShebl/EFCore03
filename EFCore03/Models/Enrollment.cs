@@ -19,7 +19,7 @@ namespace EFCore03.Models
         public decimal Progress { get; set; } 
         // status
         public Status status { get; set; }
-        public Students student { get; set; }
-        public Courses course { get; set; }
+        //public Students student { get; set; }
+        //public Courses course { get; set; }
     }
 }

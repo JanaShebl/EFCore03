@@ -26,6 +26,13 @@ namespace EFCore03.Configurations
                 .WithOne(c => c.Category)
                 .HasForeignKey(c => c.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
+            builder.HasData(
+                new Category { Id = 1, Name = "Programming", Description = "Courses related to programming languages and software development." },
+                new Category { Id = 2, Name = "Web Development", Description = "Courses related to web development technologies.", ParentCategoryId = 1 },
+                new Category { Id = 3, Name = "Mobile Development", Description = "Courses related to mobile app development.", ParentCategoryId = 1 },
+                new Category { Id = 4, Name = "Data Science", Description = "Courses related to data analysis, machine learning, and AI.", ParentCategoryId = 1 },
+                new Category { Id = 5, Name = "Database Management", Description = "Courses related to database design and management." }
+            );
         }
     }
 }
