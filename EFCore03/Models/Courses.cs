@@ -20,7 +20,7 @@ namespace EFCore03.Models
         public Instructors Instructor { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        // public ICollection<Enrollments> Enrollments { get; set; } = new List<Enrollments>();
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
 
     }
 }
