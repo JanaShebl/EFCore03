@@ -1,6 +1,7 @@
 ﻿using EFCore03.Data;
 using EFCore03.Enums;
 using EFCore03.Models;
+using EFCore03.Operations;
 namespace EFCore03
 {
     internal class Program
@@ -36,8 +37,16 @@ namespace EFCore03
                     new Enrollment { StudentId = 3, CourseId = 5, EnrollmentDate = DateTime.Now, Progress = 10, status = Status.Dropped }
                 };
                 connection.Enrollments.AddRange(enrollments);
-                 connection.SaveChanges();
-                        }
+                connection.SaveChanges();
+            }
+
+            InstructorOperations.AddInstructor(new Instructors
+            {
+                Name = "Ali Ahmed",
+                Email = "ali.ahmed@example.com",
+                bio = "Senior instructor",
+                JoinDate=DateTime.Now
+            });
         }
     }
 }
