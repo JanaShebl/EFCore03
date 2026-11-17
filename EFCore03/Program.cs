@@ -47,6 +47,17 @@ namespace EFCore03
                 bio = "Senior instructor",
                 JoinDate=DateTime.Now
             });
+
+            CourseOperations.AddCourse(new Courses
+            {
+                Title = "C# Programming",
+                Description = "Learn the basics of C# programming.",
+                Price = 40000,
+                InstructorId = 1,
+                CategoryId = 1
+            });
+
+            StudentOperations.AddStudent();
         }
     }
 }
